@@ -3,20 +3,13 @@ Project submission for the `Global Travel Hackathon in Barcelona, by Spacers tea
 
 **A revolutionary platform that lets travellers with an intersection in destination and time, find each other and explore experiences together.**
 
-![Add a screenshot from your project. For example the main website page.](https://raw.githubusercontent.com/Global-Travel-Hackathon/GTH-Location-TeamName/master/screenshots/Global-Travel-Hackathon-image.png)
+!(https://imgur.com/JQk89NK)
 
 ## :books: Description
 
-Write a short abstract of the project. Don't forget to include:
-
-* Hackathon topic you used (Sustainability, Accessibility or Community);
-* The development tools used to build the project;
-* SDKs used in the project;
-* APIs used in the project;
-* Any assets used in the project;
-* Any libraries used in the project;
-* Any components not created at the hackathon;
-
+* We are tackling the community aspect of the travel industry.
+* We used PyCharm and VSCode to develop the application in Python and React;
+* We used the sockets.io as our primary library for the chat
 ## :hugs: Maintainers
 
 List all the team members. For example:
@@ -28,13 +21,78 @@ List all the team members. For example:
 
 ## :tada: Why is this so awesome?
 
-* List reasons why you think your project is awesome.
-* Two.
-* Etc.
+* We are tackling the community aspect of travel by creating an environment where travellers get to meet new individuals.
 
 ## :hammer_and_wrench: Installation
 
-Write a short description how can other people run your project.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### npm start
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+### npm test
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### npm run build
+
+Builds the app for production to the build folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### npm run eject
+
+Note: this is a one-way operation. Once you `eject`, you can’t go back!
+
+If you aren’t satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### npm run build fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 ## :bulb: Devstack
 
@@ -45,8 +103,6 @@ With additional technologies, such as :
 * Python
 * Pandas
 * Sockets.io
-* 
-* 
 
 ## :warning: Licence
 
