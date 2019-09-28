@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+`   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+
+    <script type="text/javascript">
+
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on('connect', function ( client ) {
+            // var socketId = socket.id;
+            // var address = socket.request.connect.remoteAddress;
+            var number = Math.floor(Math.random() * 1000);
+
+            var user_name = `usernumber_${number}`;
+            socket.emit('my event', {
+                data: 'User Connected',
+                username: user_name
+            })
+            var form = $('form').on('submit', function (e) {
+                e.preventDefault()
+                let user_input = $('input.message').val()
+
+                    socket.emit('my event', {
+                        user_name: user_name,
+                        message: user_input
+                    })
+                $('input.message').val('').focus()
+            })
+        })
+        socket.on('my response', function (msg) {
+            console.log(msg)
+            if (typeof msg.user_name !== 'undefined') {
+                $('h3').remove()
+                $('div.message_holder').append('<div><b style="color: #000">' + msg.user_name + '</b> ' + msg.message + '</div>')
+            }
+        })
+    </script>
+</head>
+<body>
+{% if username != None %}
+    <div class="message_holder">
+        {% for i, data in past_messages.iterrows() %}
+            <div><b style="color: #000">{{ data['username'] }}</b> {{ data['message'] }}</div>
+        {% endfor %}
+    </div>
+    <div class="send-message">
+        <form>
+            <input type="text" class="message" placeholder="Messages"/>
+            <input type="submit"/>
+        </form>
+    </div>
+{% endif %}
+</body>
+</html>
