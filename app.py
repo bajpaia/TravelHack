@@ -62,10 +62,10 @@ def home():
 
 @app.route('/<selection>')
 def image_page(selection):
-    if selection == 'chat':
-        return redirct(url_for('chat_room'))
-    img = url_for('static', filename=f'images/{selection}.jpg')
-    return render_template('image.html', app_name=selection, app_pic=img)
+    # if selection == 'chat':
+    return redirect(url_for('chat_room'))
+    # img = url_for('static', filename=f'images/{selection}.jpg')
+    # return render_template('image.html', app_name=selection, app_pic=img)
 
 
 def messageReceived(methods=None):
